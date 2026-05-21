@@ -2,7 +2,7 @@
 [![Actions Status](https://github.com/rejwww/qa-auto-engineer-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/rejwww/qa-auto-engineer-javascript-project-44/actions)
 
 
-## Makefile
+## Makefile - команды
 
 Команда **make install** - полезна при первом клонировании репозитория (или после удаления node_modules).
 
