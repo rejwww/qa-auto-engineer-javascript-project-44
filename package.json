@@ -18,9 +18,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "lodash": "^4.18.1"
+    "lodash": "^4.18.1",
+    "readline-sync": "^1.4.10"
   },
   "bin": {
-  "brain-games": "bin/brain-games.js"
-}
+    "brain-games": "bin/brain-games.js"
+  }
 }
