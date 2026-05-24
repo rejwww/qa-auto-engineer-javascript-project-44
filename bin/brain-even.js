@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import readlineSync from 'readline-sync';
 import {userName} from '../src/cli.js'; 
 const checkingForParity = () =>{
@@ -27,10 +29,10 @@ while((flag === false) && (i < 3)){
     } else{
         if (correctAnswer === 'yes'){
             flag = true;
-            return `'${userAnswer}' is wrong answer ;(. Correct answer was 'yes'.`
+            console.log (`'${userAnswer}' is wrong answer ;(. Correct answer was 'yes'.`)
         } else {
             flag = true;
-            return `'${userAnswer}' is wrong answer ;(. Correct answer was 'no'.`
+            console.log (`'${userAnswer}' is wrong answer ;(. Correct answer was 'no'.`)
         }
     }
 }
