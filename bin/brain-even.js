@@ -1,0 +1,46 @@
+import readlineSync from 'readline-sync';
+import {userName} from '../src/cli.js'; 
+const checkingForParity = () =>{
+
+
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
+let flag = false;
+let i = 0;
+
+while((flag === false) && (i < 3)){
+
+    let correctAnswer = ''
+    let randomNumber = Math.floor(Math.random() * 1000)
+
+    const userAnswer = readlineSync.question(`'Question: '${randomNumber} `);
+
+    if (randomNumber % 2 === 0){
+        correctAnswer = 'yes'
+    } else{
+        correctAnswer = 'no'
+    }
+
+    if (userAnswer === correctAnswer){
+        console.log("Correct!");
+        i++;
+    } else{
+        if (correctAnswer === 'yes'){
+            flag = true;
+            return `'${userAnswer}' is wrong answer ;(. Correct answer was 'yes'.`
+        } else {
+            flag = true;
+            return `'${userAnswer}' is wrong answer ;(. Correct answer was 'no'.`
+        }
+    }
+}
+
+
+    if (flag === true){
+    return `Let's try again, ${userName}!`
+    } else{
+    return `Congratulations, ${userName}!`
+    }
+}
+
+console.log(checkingForParity())
