@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import {userName} from '../src/cli.js'; 
+//import {userName} from '../src/cli.js'; 
+import {resultOfGame, resultOfRound } from '../src/index.js'; 
+
+
+
 const checkingForParity = () =>{
-
-
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 let flag = false;
@@ -12,7 +14,7 @@ let i = 0;
 
 while((flag === false) && (i < 3)){
 
-    let correctAnswer = ''
+    let correctAnswer;
     let randomNumber = Math.floor(Math.random() * 1000)
 
     const userAnswer = readlineSync.question(`'Question: '${randomNumber} `);
@@ -23,26 +25,35 @@ while((flag === false) && (i < 3)){
         correctAnswer = 'no'
     }
 
+
     if (userAnswer === correctAnswer){
         console.log("Correct!");
         i++;
     } else{
-        if (correctAnswer === 'yes'){
-            flag = true;
-            console.log (`'${userAnswer}' is wrong answer ;(. Correct answer was 'yes'.`)
-        } else {
-            flag = true;
-            console.log (`'${userAnswer}' is wrong answer ;(. Correct answer was 'no'.`)
-        }
+
+        flag = true;
+        console.log(resultOfRound(userAnswer, correctAnswer))
     }
+    // if (userAnswer === correctAnswer){
+    //     console.log("Correct!");
+    //     i++;
+    // } else{
+    //     if (correctAnswer === 'yes'){
+    //         flag = true;
+    //         console.log (`'${userAnswer}' is wrong answer ;(. Correct answer was 'yes'.`)
+    //     } else {
+    //         flag = true;
+    //         console.log (`'${userAnswer}' is wrong answer ;(. Correct answer was 'no'.`)
+    //     }
+    // }
 }
 
-
-    if (flag === true){
-    return `Let's try again, ${userName}!`
-    } else{
-    return `Congratulations, ${userName}!`
-    }
+return resultOfGame(flag);
+    // if (flag === true){
+    // return `Let's try again, ${userName}!`
+    // } else{
+    // return `Congratulations, ${userName}!`
+    // }
 }
 
 console.log(checkingForParity())
