@@ -2,7 +2,7 @@
 
 import readlineSync from 'readline-sync';
 //import {userName} from '../src/cli.js'; 
-import {resultOfGame, resultOfRound } from '../src/index.js'; 
+import {resultOfGame, resultOfRound } from '../../src/index.js'; 
 
 
 
@@ -17,7 +17,7 @@ while((flag === false) && (i < 3)){
     let correctAnswer;
     let randomNumber = Math.floor(Math.random() * 1000)
 
-    const userAnswer = readlineSync.question(`'Question: '${randomNumber} `);
+    const userAnswer = readlineSync.question(`'Question:' ${randomNumber} `);
 
     if (randomNumber % 2 === 0){
         correctAnswer = 'yes'

@@ -21,3 +21,9 @@
 
 Представление об игре по ссылке:
  https://asciinema.org/a/69sldFDc1wIhJojv
+
+
+## Игра: "Калькулятор"
+
+Представление об игре по ссылке:
+ https://asciinema.org/a/Vany9cQmcixuFBfA

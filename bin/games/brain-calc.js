@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import {resultOfGame, resultOfRound } from '../src/index.js'; 
+import {resultOfGame, resultOfRound } from '../../src/index.js'; 
 
 
 
@@ -38,7 +38,6 @@ while((flag === false) && (i < 3)){
         console.log("Correct!");
         i++;
     } else{
-
         flag = true;
         console.log(resultOfRound(userAnswer, correctAnswer))
     }
