@@ -26,4 +26,4 @@
 ## Игра: "Калькулятор"
 
 Представление об игре по ссылке:
- https://asciinema.org/a/Vany9cQmcixuFBfA
+ https://asciinema.org/a/8E8KEHuUd6U3jenA
