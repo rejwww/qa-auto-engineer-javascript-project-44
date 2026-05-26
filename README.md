@@ -34,3 +34,4 @@
 ## Игра: "НОД"
 
 Представление об игре по ссылке:
+ https://asciinema.org/a/LdhNVhbwIgp4O3RF
