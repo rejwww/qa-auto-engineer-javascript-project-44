@@ -15,7 +15,7 @@ while((flag === false) && (i < 3)){
     let randomNumber1 = Math.floor(Math.random() * 100)
     let randomNumber2 = Math.floor(Math.random() * 100)
 
-    const userAnswer = readlineSync.question(`'Question:' ${randomNumber1} , ${randomNumber2} `);
+    const userAnswer = readlineSync.question(`'Question:' ${randomNumber1} ${randomNumber2} `);
 
     
     let min = Math.min(randomNumber1,randomNumber2);
