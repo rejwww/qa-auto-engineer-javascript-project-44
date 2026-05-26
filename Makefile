@@ -15,3 +15,9 @@ brain-even:
 
 brain-calc:
 	node bin/games/brain-calc.js
+
+brain-gcd:
+	node bin/games/brain-gcd.js
+
+start-by-name:
+	npm link
