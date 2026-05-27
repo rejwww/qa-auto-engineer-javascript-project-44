@@ -1,50 +1,48 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import {resultOfGame, resultOfRound } from '../../src/index.js'; 
+import { resultOfGame, resultOfRound } from '../../src/index.js';
 
+const Calculator = () => {
+  console.log('What is the result of the expression?');
 
+  let flag = false;
+  let i = 0;
 
-const Calculator = () =>{
-console.log('What is the result of the expression?');
-
-let flag = false;
-let i = 0;
-
-while((flag === false) && (i < 3)){
-
+  while (flag === false && i < 3) {
     let correctAnswer;
-    let randomNumber1 = Math.floor(Math.random() * 100)
-    let randomNumber2 = Math.floor(Math.random() * 100)
-    const arrMathSign = ['+','-','*']
+    const randomNumber1 = Math.floor(Math.random() * 100);
+    const randomNumber2 = Math.floor(Math.random() * 100);
+    const arrMathSign = ['+', '-', '*'];
 
-    let randomMathSign = Math.floor(Math.random() * arrMathSign.length)
+    const randomMathSign = Math.floor(Math.random() * arrMathSign.length);
 
-    const userAnswer = readlineSync.question(`'Question:' ${randomNumber1} ${arrMathSign[randomMathSign]} ${randomNumber2} `);
+    const userAnswer = readlineSync.question(
+      `'Question:' ${randomNumber1} ${arrMathSign[randomMathSign]} ${randomNumber2} `,
+    );
 
-    switch (arrMathSign[randomMathSign]){
-        case '+':
-        correctAnswer = randomNumber1 + randomNumber2
+    switch (arrMathSign[randomMathSign]) {
+      case '+':
+        correctAnswer = randomNumber1 + randomNumber2;
         break;
-        case '-':
-        correctAnswer = randomNumber1 - randomNumber2
+      case '-':
+        correctAnswer = randomNumber1 - randomNumber2;
         break;
-        case '*':
-        correctAnswer = randomNumber1 * randomNumber2
+      case '*':
+        correctAnswer = randomNumber1 * randomNumber2;
         break;
     }
 
-     if (userAnswer === String(correctAnswer)){
-        console.log("Correct!");
-        i++;
-    } else{
-        flag = true;
-        console.log(resultOfRound(userAnswer, correctAnswer))
+    if (userAnswer === String(correctAnswer)) {
+      console.log('Correct!');
+      i++;
+    } else {
+      flag = true;
+      console.log(resultOfRound(userAnswer, correctAnswer));
     }
-}
+  }
 
-return resultOfGame(flag);
+  return resultOfGame(flag);
+};
 
-}
-
-console.log(Calculator())
+console.log(Calculator());

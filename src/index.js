@@ -1,40 +1,31 @@
-import {userName} from './cli.js'; 
+import { userName } from './cli.js';
 
+const resultOfGame = (flag) => {
+  let resultGame;
 
-const resultOfGame = (flag) =>{
+  if (flag === true) {
+    resultGame = `Let's try again, ${userName}!`;
+  } else {
+    resultGame = `Congratulations, ${userName}!`;
+  }
 
-    let resultGame;
+  return resultGame;
+};
 
- if (flag === true){
-    resultGame = `Let's try again, ${userName}!`
-    } else {
-    resultGame =  `Congratulations, ${userName}!`
-    }
+const resultOfRound = (userAnswer, correctAnswer) => {
+  const resultRound = `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`;
 
-    return resultGame;
-}
-
-
-const resultOfRound = (userAnswer, correctAnswer) =>{
-    
-    let resultRound;
-
-            resultRound = `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
-
-        return resultRound;
-}
-
+  return resultRound;
+};
 
 function arithmeticРrogressionСalc(start, step, length) {
- let resultArr = [];
- let currentElement;
- for (let i = 0; i < length; i++) {
-    currentElement = start + i * step
- resultArr.push(currentElement);
+  const resultArr = [];
+  let currentElement;
+  for (let i = 0; i < length; i++) {
+    currentElement = start + i * step;
+    resultArr.push(currentElement);
+  }
+  return resultArr;
 }
- return resultArr;
-}
 
-
-
-export {resultOfGame, resultOfRound, arithmeticРrogressionСalc};
+export { resultOfGame, resultOfRound, arithmeticРrogressionСalc };

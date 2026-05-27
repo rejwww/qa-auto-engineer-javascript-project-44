@@ -55,3 +55,15 @@
 
 Представление об игре по ссылке:
   https://asciinema.org/a/8gTvn7ABj99X0xDT
+
+
+  
+
+## ESLint и Prettier
+
+**npx prettier bin/games/name_game.js --write**  - запуска автоматического исправления ошибок Prettier (где name_game.js - имя файла)
+
+**npx eslint --fix** - запуска автоматического исправления ошибок ESLint в конкретном файле 
+
+    
+    
