@@ -22,5 +22,8 @@ brain-gcd:
 brain-progression:
 	node bin/games/brain-progression.js
 
+brain-prime: 
+	bin/games/brain-prime.js
+
 start-by-name:
 	npm link
