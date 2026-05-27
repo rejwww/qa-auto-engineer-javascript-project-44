@@ -35,3 +35,9 @@
 
 Представление об игре по ссылке:
  https://asciinema.org/a/LdhNVhbwIgp4O3RF
+
+
+## Игра: "Арифметическая прогрессия"
+
+Представление об игре по ссылке:
+ https://asciinema.org/a/YqEdzZjttArQXbJi

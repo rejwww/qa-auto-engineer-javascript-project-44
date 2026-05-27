@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-//import {userName} from '../src/cli.js'; 
 import {resultOfGame, resultOfRound } from '../../src/index.js'; 
 
 
@@ -34,26 +33,9 @@ while((flag === false) && (i < 3)){
         flag = true;
         console.log(resultOfRound(userAnswer, correctAnswer))
     }
-    // if (userAnswer === correctAnswer){
-    //     console.log("Correct!");
-    //     i++;
-    // } else{
-    //     if (correctAnswer === 'yes'){
-    //         flag = true;
-    //         console.log (`'${userAnswer}' is wrong answer ;(. Correct answer was 'yes'.`)
-    //     } else {
-    //         flag = true;
-    //         console.log (`'${userAnswer}' is wrong answer ;(. Correct answer was 'no'.`)
-    //     }
-    // }
 }
 
 return resultOfGame(flag);
-    // if (flag === true){
-    // return `Let's try again, ${userName}!`
-    // } else{
-    // return `Congratulations, ${userName}!`
-    // }
 }
 
 console.log(checkingForParity())
