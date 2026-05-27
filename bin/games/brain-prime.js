@@ -12,7 +12,7 @@ const primeNumberGame = () => {
     let correctAnswer = 'yes';
     const randomNumber = Math.floor(Math.random() * 10);
 
-    const userAnswer = readlineSync.question(`'Question:' ${randomNumber} `);
+    const userAnswer = readlineSync.question(`'Question: ${randomNumber}' `);
 
     if (randomNumber <= 1) {
       correctAnswer = 'no';

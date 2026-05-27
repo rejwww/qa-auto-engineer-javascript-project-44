@@ -21,7 +21,7 @@ const arithmeticРrogressionGame = () => {
     const correctAnswer = arrРrogression[randomNumber];
     arrРrogression[randomNumber] = '..';
 
-    const userAnswer = readlineSync.question(`'Question:' ${arrРrogression} `);
+    const userAnswer = readlineSync.question(`'Question: ${arrРrogression}' `);
 
     if (userAnswer === String(correctAnswer)) {
       console.log('Correct!');
