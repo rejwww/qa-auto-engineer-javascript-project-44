@@ -25,6 +25,16 @@ const resultOfRound = (userAnswer, correctAnswer) =>{
 }
 
 
+function arithmeticРrogressionСalc(start, step, length) {
+ let resultArr = [];
+ let currentElement;
+ for (let i = 0; i < length; i++) {
+    currentElement = start + i * step
+ resultArr.push(currentElement);
+}
+ return resultArr;
+}
 
 
-export {resultOfGame, resultOfRound};
+
+export {resultOfGame, resultOfRound, arithmeticРrogressionСalc};
