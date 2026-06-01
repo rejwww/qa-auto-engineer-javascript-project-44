@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import { resultOfGame, resultOfRound, arithmeticРrogressionСalc } from '../../src/index.js';
+import { resultOfGame, resultOfRound, arithmeticProgressionCalc } from '../../src/index.js';
 
-const arithmeticРrogressionGame = () => {
+const arithmeticProgressionGame = () => {
   console.log('What number is missing in the progression?');
 
   let flag = false;
@@ -16,12 +16,12 @@ const arithmeticРrogressionGame = () => {
     const randomNumber = Math.floor(Math.random() * randomLenght);
 
     //вызов ф-ции
-    const arrРrogression = arithmeticРrogressionСalc(randomStart, randomStep, randomLenght);
+    const arrProgression = arithmeticProgressionCalc(randomStart, randomStep, randomLenght);
 
-    const correctAnswer = arrРrogression[randomNumber];
-    arrРrogression[randomNumber] = '..';
+    const correctAnswer = arrProgression[randomNumber];
+    arrProgression[randomNumber] = '..';
 
-    const userAnswer = readlineSync.question(`'Question: ${arrРrogression.join(" ")}' `);
+    const userAnswer = readlineSync.question(`Question: ${arrProgression.join(" ")} `);
 
     if (userAnswer === String(correctAnswer)) {
       console.log('Correct!');
@@ -34,4 +34,4 @@ const arithmeticРrogressionGame = () => {
   return resultOfGame(flag);
 };
 
-console.log(arithmeticРrogressionGame());
+console.log(arithmeticProgressionGame());

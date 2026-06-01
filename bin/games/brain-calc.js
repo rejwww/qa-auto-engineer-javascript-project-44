@@ -18,7 +18,7 @@ const Calculator = () => {
     const randomMathSign = Math.floor(Math.random() * arrMathSign.length);
 
     const userAnswer = readlineSync.question(
-      `'Question: ${randomNumber1} ${arrMathSign[randomMathSign]} ${randomNumber2}' `,
+      `Question: ${randomNumber1} ${arrMathSign[randomMathSign]} ${randomNumber2} `,
     );
 
     switch (arrMathSign[randomMathSign]) {

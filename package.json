@@ -22,7 +22,6 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "lodash": "^4.18.1",
     "readline-sync": "^1.4.10"
   },
   "bin": {

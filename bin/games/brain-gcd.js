@@ -13,7 +13,7 @@ const greatestCommonDivisor = () => {
     const randomNumber1 = Math.floor(Math.random() * 100);
     const randomNumber2 = Math.floor(Math.random() * 100);
 
-    const userAnswer = readlineSync.question(`'Question: ${randomNumber1} ${randomNumber2}' `);
+    const userAnswer = readlineSync.question(`Question: ${randomNumber1} ${randomNumber2} `);
 
     let min = Math.min(randomNumber1, randomNumber2);
     let max = Math.max(randomNumber1, randomNumber2);
