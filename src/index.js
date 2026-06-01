@@ -18,7 +18,7 @@ const resultOfRound = (userAnswer, correctAnswer) => {
   return resultRound;
 };
 
-function arithmeticРrogressionСalc(start, step, length) {
+function arithmeticProgressionCalc(start, step, length) {
   const resultArr = [];
   let currentElement;
   for (let i = 0; i < length; i++) {
@@ -28,4 +28,4 @@ function arithmeticРrogressionСalc(start, step, length) {
   return resultArr;
 }
 
-export { resultOfGame, resultOfRound, arithmeticРrogressionСalc };
+export { resultOfGame, resultOfRound, arithmeticProgressionCalc };

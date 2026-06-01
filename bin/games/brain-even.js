@@ -13,7 +13,7 @@ const checkingForParity = () => {
     let correctAnswer;
     const randomNumber = Math.floor(Math.random() * 1000);
 
-    const userAnswer = readlineSync.question(`'Question: ${randomNumber}' `);
+    const userAnswer = readlineSync.question(`Question: ${randomNumber} `);
 
     if (randomNumber % 2 === 0) {
       correctAnswer = 'yes';
