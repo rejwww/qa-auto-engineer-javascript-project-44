@@ -1,3 +1,4 @@
+import readlineSync from 'readline-sync';
 import { userName } from './cli.js';
 
 const resultOfGame = (flag) => {
@@ -28,4 +29,30 @@ function arithmeticProgressionCalc(start, step, length) {
   return resultArr;
 }
 
-export { resultOfGame, resultOfRound, arithmeticProgressionCalc };
+const run = (startText, gameQuestionAnswer) => {
+  console.log(startText);
+
+  let flag = false;
+  let i = 0;
+  const round = 3;
+
+  while (flag === false && i < round) {
+    //вопрос
+    const [question, correctAnswer] = gameQuestionAnswer();
+
+    //правильный ответ
+    const userAnswer = readlineSync.question(`Question: ${question} `);
+
+    if (userAnswer === String(correctAnswer)) {
+      console.log('Correct!');
+      i++;
+    } else {
+      flag = true;
+      console.log(resultOfRound(userAnswer, correctAnswer));
+    }
+  }
+
+  return resultOfGame(flag);
+};
+
+export { resultOfGame, resultOfRound, arithmeticProgressionCalc, run };
